@@ -54,11 +54,11 @@ class Relogio:
         novo_minutos = self.minutos + other.minutos
         novo_horas = self.horas + other.horas
 
-        if not 0 <= novo_segundos <= 60:
+        if not 0 <= novo_segundos < 60:
             novo_minutos += 1 
             novo_segundos %= 60
 
-        if not 0 <= novo_minutos <= 60:
+        if not 0 <= novo_minutos < 60:
             novo_horas += 1 
             novo_minutos %= 60
 
@@ -71,11 +71,11 @@ class Relogio:
         novo_minutos = self.minutos - other.minutos
         novo_horas = self.horas - other.horas
 
-        if not 0 <= novo_segundos <= 60:
+        if not 0 <= novo_segundos < 60:
             novo_minutos -= 1 
             novo_segundos %= 60
 
-        if not 0 <= novo_minutos <= 60:
+        if not 0 <= novo_minutos < 60:
             novo_horas -= 1 
             novo_minutos %= 60
 
