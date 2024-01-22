@@ -207,9 +207,9 @@ def test_subtracao_2():
 
 # (r1.segundos - r2.segundos) ≥ 0, (r1.minutos - r2.minutos) < 0, (r1.horas - r2.horas) ≥ 0
 def test_subtracao_3():
-    r1 = Relogio(18, 30, 40)
+    r1 = Relogio(18, 30, 51)
     r2 = Relogio(5, 40, 50)
-    assert str(r1 - r2) == "12:49:50"
+    assert str(r1 - r2) == "12:50:01"
 
 # (r1.segundos - r2.segundos) ≥ 0, (r1.minutos - r2.minutos) < 0, (r1.horas - r2.horas) < 0
 def test_subtracao_4():
@@ -219,21 +219,21 @@ def test_subtracao_4():
 
 # (r1.segundos - r2.segundos) < 0, (r1.minutos - r2.minutos) ≥ 0, (r1.horas - r2.horas) ≥ 0
 def test_subtracao_5():
-    r1 = Relogio(14, 50, 30)
-    r2 = Relogio(6, 25, 20)
-    assert str(r1 - r2) == "08:25:10"
+    r1 = Relogio(6, 50, 30)
+    r2 = Relogio(14, 25, 20)
+    assert str(r1 - r2) == "16:25:10"
 
 # (r1.segundos - r2.segundos) < 0, (r1.minutos - r2.minutos) ≥ 0, (r1.horas - r2.horas) < 0
 def test_subtracao_6():
-    r1 = Relogio(5, 40, 15)
-    r2 = Relogio(2, 35, 25)
-    assert str(r1 - r2) == "03:04:50"
+    r1 = Relogio(2, 40, 15)
+    r2 = Relogio(5, 35, 25)
+    assert str(r1 - r2) == "21:04:50"
 
 # (r1.segundos - r2.segundos) < 0, (r1.minutos - r2.minutos) < 0, (r1.horas - r2.horas) ≥ 0
 def test_subtracao_7():
-    r1 = Relogio(16, 25, 40)
-    r2 = Relogio(9, 40, 50)
-    assert str(r1 - r2) == "06:44:50"
+    r1 = Relogio(14, 25, 50)
+    r2 = Relogio(18, 40, 40)
+    assert str(r1 - r2) == "19:45:10"
 
 # (r1.segundos - r2.segundos) < 0, (r1.minutos - r2.minutos) < 0, (r1.horas - r2.horas) < 0
 def test_subtracao_8():
